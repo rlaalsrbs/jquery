@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+		.box {
+			width: 200px;
+			height: 200px;
+			background: orange;
+			transition: all 1s;
+		}
+		
+		.fadeOut {
+			opacity: 0;
+		}
+		</style>
+		<script>
+		$(function() {
+			$("#button1").click(function() {
+				/*
+				if ($(".box").css("display") == "none") { // 안보임
+					$(".box").show(); // 보이게 처리 
+				} else { // 보임
+					$(".box").hide(); // 안보이게 처리
+				}
+				*/
+				$(".box").toggle();
+			});
+			
+			$("#button2").click(function() {
+				/*
+				if ($(".box").css("display") == "none") { // 안보임
+					$(".box").slideDown();
+				} else { // 보임 
+					$(".box").slideUp(); 
+				}
+				*/
+				$(".box").slideToggle();
+			});
+			
+			$("#button3").click(function() {
+				/*
+				if ($(".box").css("display") == "none") { // 안보임 
+					$(".box").fadeIn();
+				} else { // 보임 
+					$(".box").fadeOut();
+				}
+				*/
+				$(".box").fadeToggle();
+			});
+			
+			$("#button4").click(function() {
+				$(".box").addClass("fadeOut");
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<button id='button1'>hide / show</button>
+		<button id='button2'>slideUp / slideDown</button>
+		<button id='button3'>fadeOut / fadeIn</button>
+		<button id='button4'>CSS fadeOut</button>
+		
+		<div class='box'></div>
+	</body>
+</html>

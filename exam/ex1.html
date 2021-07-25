@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="goods.js"></script>
+	</head>
+	<body>
+		<h1>상품 등록</h1>
+		
+		<button type="button" id='add'>상품 추가</button>
+		<form id='frm' method='post' action=''></form>
+		
+		<script type="text/html" id="goods_form">
+			<div class='goods'>
+				<dl>
+					<dt>상품번호</dt>
+					<dd><%=no%></dd>
+				</dl>
+				<dl>
+					<dt>상품명</dt>
+					<dd>
+						<input type="text" name="goodsNm">
+					</dd>
+				</dl>
+				<dl>
+					<dt>판매가</dt>
+					<dd>
+						<input type="text" name="price">
+					</dd>
+				</dl>
+				<dl>
+					<dt>소비자가</dt>
+					<dd>
+						<input type="text" name="consumer">
+					</dd>
+				</dl>
+				<dl>
+					<dt>옵션</dt>
+					<dd>
+						<table class='opts'>
+							<thead>
+								<tr>
+									<th>옵션명</th>
+									<th>옵션판매가</th>
+									<th>옵션코드</th>
+									<th nowrap>
+										<button type='button' class='add_opt'>추가</button>
+									</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</dd>
+				</dl>
+				<dl>
+					<dt>상품설명</dt>
+					<dd>
+						<textarea name='description'></textarea>
+					</dd>
+				</dl>
+				<button type="button" class='del'>상품 삭제</button>
+			</div>
+		</script>
+		<script type="text/html" id="goods_opt_form">
+			<tr>
+				<td>
+					<input type="text" name="optNm">
+				</td>
+				<td>
+					<input type="text" name="optPrice">
+				</td>
+				<td>
+					<input type="text" name="optCd">
+				</td>
+				<td nowrap>
+					<button type="button" class="del_opt">삭제</button>
+				</td>
+			</tr>
+		</script>
+		
+	</body>
+</html>

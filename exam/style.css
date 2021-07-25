@@ -1,0 +1,38 @@
+.goods {
+	border: 1px solid #000000;
+	padding: 15px;
+	margin-bottom: 10px;
+	width: 600px;
+}
+
+.goods dl {
+	display: table; 
+	width: 100%;
+}
+
+.goods dt { 
+	display: table-cell;
+	width: 100px;
+	vertical-align: middle;
+}
+
+.goods dd {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+input[type='text'] {
+	width: 90%; 
+	border: 1px solid #d5d5d5;
+	height: 45px;
+}
+
+textarea {
+	width: 90%;
+	border: 1px solid #d5d5d5;
+	height: 150px;
+}
+
+#add { 
+	margin-bottom: 10px;
+}

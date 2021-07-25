@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function() {
+			$("#button").click(function(e) {
+				//console.log(e); // 이벤트 객체
+				const target = e.target;
+				console.log(target);
+				// this == e.target  동일
+				console.log(this); // document 객체 -> jQuery 메서드 사용 X 
+				// jQuery 메서드 사용 하기 위해서는 $(this) 
+				//this.css("border", "1px solid red");
+				//$(this)
+				
+				$(this).css("border", "1px solid red");
+				console.log($(this));
+				alert("클릭 이벤트 발생");
+			});
+			
+			$("#button2").dblclick(function() {
+				alert("더블클릭 이벤트 발생");
+			});
+			
+			// focus, blur
+			$("#text").focus(function() {
+				$(this).css("background", "yellow");
+			});
+			
+			$("#text").blur(function() {
+				$(this).css("background", "white");
+			});
+			
+			$("#text").keyup(function(event) { // 키를 눌렀다가 뗄때 
+				console.log(event.keyCode); 
+				console.log($(this).val());
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<button id="button">클릭!</button>
+		<button id="button2">클릭!</button>
+		<br>
+		
+		<input type="text" id="text">
+	</body>
+</html>

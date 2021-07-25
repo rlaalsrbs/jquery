@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function() {
+			// 형제 이전 요소 
+			//$("#menu3").prev().css("background", "orange");
+			//$("#menu3").prevAll().css("background", "orange");
+			//$("#menu5").prevUntil("#menu1").css("background", "orange");
+			
+			// 형제 다음 요소 선택 
+			//$("#menu3").next().css("background", "red");
+			//$("#menu3").nextAll().css("background", "red");
+			//$("#menu5").nextUntil("#menu9").css("background", "red");
+			
+			// 전체 형제 요소 선택자
+			$("#menu5").siblings().css("background", "blue");
+		});
+		</script>
+	</head>
+	<body>
+		<ul class='main'>
+			<li id='menu1'>메뉴1</li>
+			<li id='menu2'>메뉴2</li>
+			<li id='menu3'>메뉴3</li>
+			<li id='menu4'>메뉴4</li>
+			<li id='menu5'>메뉴5</li>
+			<li id='menu6'>메뉴6</li>
+			<li id='menu7'>메뉴7</li>
+			<li id='menu8'>메뉴8</li>
+			<li id='menu9'>메뉴9</li>
+			<li id='menu10'>메뉴10</li>
+		</ul>
+	</body>
+</html>

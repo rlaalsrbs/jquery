@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function() {
+			const list = $("li");
+			list.each(function() {	
+				// $(this) 순회한 각각 요소
+				//console.log("this", this); // document 객체 -> jQuery 메서드 사용 X
+				//console.log("$(this)", $(this)); // jQuery 객체 -> jQuery 메서드 사용 가능 
+				
+				// css 
+				//this.css("background", "orange");
+				
+				$(this).css("background", "orange");
+			});
+			
+			$.each(list, function() {
+				$(this).css("background", "red");
+			});
+			
+			
+			const a = ["apple", "mango", "orange", "melon"];
+			const result = $.inArray("orange", a);
+			console.log(result);
+			const result2 = $.inArray("water melon", a);
+			console.log(result2);
+			
+			// 배열 객체인지 아닌지 체크 
+			console.log($.isArray(a));
+			console.log(a instanceof Array);
+			
+			let b = [0,1,2,3,4,5];
+			//$.merge(b, a);
+			//console.log(b);
+			
+			b = b.concat(a);
+			console.log(b);
+			
+		});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+			<li>메뉴5</li>
+		</ul>
+	</body>
+</html>

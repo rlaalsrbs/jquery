@@ -1,0 +1,34 @@
+배열을 처리하는 메서드
+	$.each -> 반복 순회 (Array.forEach)
+		$("요소").each(function() {
+			$(this) ==> 반복 순회한 요소
+		});
+		
+		$.each("선택한 요소", function() {
+			$(this) ==> 반복 순회한 요소
+		});
+		
+	
+	$.map(배열객체, function() { --> Array.prototype.map -> 별도 연산 한 데이터를 새로운 배열로 반환
+	
+	})
+	
+	$.grep(데이터, 배열객체) --> Array.prototype.filter  --> 테스트한 요소가 통과된 것만 새로운 배열 반환
+	
+	
+	$.inArray(데이터, 배열객체) --> Array.prototype.indexOf 
+										--> 인덱스 번호
+										--> 없으면 -1을 반환
+	
+	
+	$.isArray(배열객체) -> 배열 객체 여부 반환(true, false) 
+							 -> Array.prototype.isArray
+							 -> instanceof 
+							 
+							 배열객체(인스턴스) instanceof Array
+							  
+	
+	$.merge(배열, 배열) -> 여러개 배열을 하나로 합칠때
+							  -> Array.prototype.concat
+							 
+							 

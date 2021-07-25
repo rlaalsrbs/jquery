@@ -1,0 +1,79 @@
+객체 조작 메서드 
+	1. 속성(Attribute) 조작 메서드
+	
+		.getAttribute(속성명) - 속성에 접근
+		.setAttribute("속성명", "값") - 속성을 추가 또는 변경
+		.removeAttribute("속성명") - 속성제거
+			id, className, style - 선택 요소 하위 속성으로 바로 접근이 가능
+			value 속성 - 바로 접근이 가능
+			
+			선택한 요소.classList -> 배열 객체(클래스 명)
+						.add(클래스명) - 클래스 추가
+						.remove(클래스명) - 클래스 제거
+						.toggle(클래스명) - 클래스가 있으면 제거, 없으면 추가
+						.contains(클래스명) - 클래스가 포함되어 있는지 여부
+						
+						
+			속성 
+					1) 이미 정의되어 있는 속성 
+					2) 사용자가 임의로 정의한 속성 	
+						- 기존 정의 되어 있는 속성에 값을 대입하면, 기본 기능에 영향을 준다
+						- data-속성명
+						- getAttribute("data-속성명");
+						- setAttribute("data-속성명", "값");
+						- removeAttribute("data-속성명");
+						
+						--> 매번 data-을 붙여줘야 해서 번거롭다
+						
+						선택한 요소.dataset 
+								-> data-속성명으로 설정한 데이터가 data- 제거된 형태로 
+								객체 데이터로 접근
+								- dataset이 객체
+									- 객체의 속성 변경, 추가, 삭제 방법 그래도 사용
+									
+									선택한 요소.dataset.속성명 = 값; // 추가, 변경
+									delete 선택한요소.dataset.속성명
+						
+				
+				
+			
+			속성 설정, 추가, 읽기 
+				.attr("속성명") -> 속성 조회(읽기)
+				.attr("속성명", "값") 
+			
+			속성 삭제
+				.removeAttr("속성명");
+				
+			상태 관련 속성(읽거나,  변경, 추가)
+				.prop("속성명", "값") -> 상태
+												체크가 된 상태, 선택이 된 상태
+												(값 - 논리값 - true, false)
+				
+				.prop("속성명") -> 속성의 상태 확인(true, false)
+				
+				
+			data-속성명
+				.data("속성명", "값") - 속성 추가, 변경
+				
+				.data("속성명")  - 속성 값 조회 
+					
+				.removeData("속성명") - 속성 제거
+					
+				<input type="number" min=100 max=200  step=2 data-min=100 data-max=200 data-step=2>
+				
+		.value -> 자주 사용하는 속성(attr로 접근 외에 별도 메서드)
+			-> .val()
+			-> .val(값)
+			
+		.addClass("클래스명") - 클래스 추가   -- classList.add()
+		.removeClass("클래스명") - 클래스 제거 -- classList.remove()
+		.toggleClass("클래스명") - 클래스가 있으면 제거, 없으면 추가  -- classList.toggle()
+		.hasClass("클래스명") - 클래스가 존재 하는지 여부 -- classList.contains()
+		
+		
+		.css() -> CSS 스타일 적용(style 속성에 추가)
+		.css("속성명", "값"); 
+		.css({
+			속성명 : "값",
+			속성명 : "값",
+		});

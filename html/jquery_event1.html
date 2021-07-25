@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		//window.onload = function() {
+		window.addEventListener("load", function() {
+			const button = document.getElementById("button");
+			/*
+			button.onclick = function() {
+				alert("이벤트1");
+			};
+			
+			button.onclick = function() {
+				alert("이벤트2");
+			};
+			*/
+			
+			button.addEventListener("click", function() {
+				alert("이벤트1");
+			});
+			
+			button.addEventListener("click", function() {
+				alert("이벤트2");
+			});
+			
+			//alert("1번째 onload 이벤트");
+			
+			document.querySelector(".box1").addEventListener("click", function() {
+				alert("Box1");
+			}, false);
+			
+			document.querySelector(".box2").addEventListener("click", function() {
+				alert("Box2");
+			}, false);
+			
+			document.querySelector(".box3").addEventListener("click", function(event) {
+				event.stopPropagation(); // 이벤트 전파 차단
+				alert("Box3");
+			}, false);
+		});
+		</script>
+	</head>
+	<body>
+		<script>
+		//window.onload = function() {
+		/*
+		window.addEventListener("load", function() {
+			alert("2번째 onload 이벤트");
+		});
+		*/
+		//};
+		</script>
+		<button id='button'>클릭!</button>
+		<style>
+			.box {
+				padding: 100px;
+			}
+			
+			.box1 { 
+				border: 1px solid orange;
+			}
+			
+			.box2 {
+				border: 1px solid red;
+			}
+			
+			.box3 {
+				border: 1px solid blue;
+			}
+		</style>
+		<div class='box box1'>
+			BOX1
+			<div class='box box2'>
+				BOX2
+				<div class='box box3'>
+					BOX3
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

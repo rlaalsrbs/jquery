@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+		</style>
+		<script>
+		$(function() {
+			/*
+			$(".box").animate({ // 가속도 linear
+				width: "200px",
+				height: "200px",
+				marginLeft :  "200px",
+				marginTop : "200px",
+			}, 2000, "linear", function() {
+				alert("애니메이션 종료!");
+			});
+			*/
+			$(".box").animate({ // 가속도 swing
+				width: "200px", 
+				height: "200px",
+				marginLeft :  "200px",
+				marginTop : "200px",
+			}, 2000, function() {
+				alert("애니메이션 종료!");
+			});
+			
+		});
+		</script>
+	</head>
+	<body>
+		<div class='box'></div>
+	</body>
+</html>

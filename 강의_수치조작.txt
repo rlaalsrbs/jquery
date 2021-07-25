@@ -1,0 +1,16 @@
+수치 조작 메서드
+	.width()
+	.height()
+	
+	.innerWidth()
+	.innerHeight()
+	
+	.outerWidth()
+	.outerHeight() 
+	
+	.offset() -> 선택한 요소가 문서에서 수평/수직으로 얼마나 떨어져 있는지 체크 
+					수평 - left
+					수직 - top
+					
+	.scrollTop() -> 수직 스크롤 양 
+	.scrollLeft() -> 수평 스크롤 양 

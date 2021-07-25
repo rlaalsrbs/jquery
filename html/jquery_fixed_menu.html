@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body { 
+				padding: 0; 
+				margin: 0;
+			}
+			header { 
+				height: 150px;
+				background-color: gray;
+			}
+			nav {
+				height: 55px; 
+				background-color: orange;
+				width: 100%;
+			}
+			section {
+				height: 2000px;
+				background-color: gray;
+			}
+			
+			.fixed {
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+		</style>
+		<script>
+		$(function() { // scroll 
+			$(window).scroll(function() {
+				/**
+					1. section 태그의 offset()의 top(문서에서 위에서 아래로 떨어져 있는 px)
+					2. scroll 정도(scrollTop())이 1번의 offset().top 만큼 도달 했을 때
+					3. addClass로 nav에 fixed 클래스 추가 
+					
+					4. 2번이 도달 하지 않은 경우 removeClass로 nav에서 fixed 클래스 제거
+				*/
+				
+				const top = $("section").offset().top;
+				const st = $(window).scrollTop();
+				if (st >= top) { // fixed 클래스 추가 
+					if (!$("nav").hasClass("fixed")) {
+						$("nav").addClass("fixed");
+					}
+				} else { // fixed 클래스 제거 
+					$("nav").removeClass("fixed");
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<header>상단</header>
+		<nav>메뉴</nav>
+		<section>본문</section>
+		<footer>하단</footer>
+	</body>
+</html>

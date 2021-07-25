@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			.box {
+				width: 200px;
+				height: 200px;
+				padding: 50px;
+				border: 5px solid #000000;
+			}
+			
+			.box2 {
+				margin: 50px;
+			}
+		</style>
+		<script>
+		$(function() {
+			const box = $(".box");
+			console.log("width, height", box.width(), box.height());
+			console.log("innerWidth, innerHeight", box.innerWidth(), box.innerHeight());
+			console.log("outerWidth, outerHeight", box.outerWidth(), box.outerHeight());
+			
+			// box2가 문서에서 상하, 좌우로 얼만큼 떨어져 있는지 체크 
+			const offset = $(".box2").offset();
+			console.log(offset); // top - 요소가 위에서 아래로 얼만큼, left - 요소가 좌에서 우로 얼만큼 떨어져 있는지 
+		});
+		</script>
+	</head>
+	<body>
+		<div class='box'></div>
+		<div class='box box2'></div>
+	</body>
+</html>

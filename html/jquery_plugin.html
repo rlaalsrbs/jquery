@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$.fn.extend({
+				changeColor : function(fontColor, bgColor) {
+					// this - document 객체, jQuery 메서드 사용 $(this)
+					$(this).css({
+						color : fontColor, 
+						background : bgColor,
+					});
+				},
+			});
+			
+			$(function() {
+				$("#button").click(function() {
+					$(this).changeColor("red", "orange");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="button">버튼</button>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function() {
+			// 태그 선택자
+			const list1 = $("li");
+			//console.log(list1);
+			
+			// 아이디 선택자
+			const menu2 = $("#menu2");
+			//console.log(menu2);
+			
+			// 클래스 선택자
+			const menus = $(".menu");
+			//console.log(menus);
+			
+			// 그룹 선택자
+			const menu23 = $("#menu2, #menu3");
+			//console.log(menu23);
+			
+			// 종속 선택자
+			const menu3 = $(".menu#menu3");
+			//console.log(menu3);
+			
+			// 하위 요소 선택자
+			//$("li span").css("border", "1px solid red");
+			
+			// 자식 요소 선택자
+			$(".main > li > span").css("border", "1px solid red");
+			
+			// 부모 요소 선택자 
+			//const parentLi = $("#menu2").parent();
+			//console.log(parentLi);
+			
+			// 상위 요소 선택자
+			const parents = $(".sub").parents();
+			//console.log(parents);
+			
+			// 가장 가까운 상위 요소 선택자
+			//const sub = $(".sub_menu").parent().parent().parent();
+			//console.log(sub);
+			//const sub = $(".sub_menu").closest(".sub");
+			//console.log(sub);
+			
+			// 자녀 요소 선택자 
+			//const children = $("#menu6").children();
+			//console.log(children);
+			//const sub_sub = $("#menu6").children().children().children().children();
+			//console.log(sub_sub);
+			const sub_sub = $("#menu6").find(".sub_sub");
+			console.log(sub_sub);
+		});
+		</script>
+	</head>
+	<body>
+		<ul class='main'>
+			<li class='menu'><span>메뉴1</span></li>
+			<li id='menu2' class='menu'><span>메뉴2</span></li>
+			<li id='menu3' class='menu'>메뉴3</li>
+			<li class='menu'>메뉴4</li>
+			<li class='menu'>메뉴5</li>
+			<li id='menu6' class='menu'>
+				<ul class='sub'>
+					<div class='wrap'>
+					<li><span>하위 메뉴1</span></li>
+					<li><span>하위 메뉴2</span></li>
+					<li><span>하위 메뉴3</span></li>
+					<li><span>하위 메뉴4</span></li>
+					<li><span>하위 메뉴5</span></li>
+					<li>
+						<ul class='sub_sub'>
+							<li class='sub_menu'>하위 하위 메뉴1</li>
+							<li class='sub_menu'>하위 하위 메뉴2</li>
+							<li class='sub_menu'>하위 하위 메뉴3</li>
+							<li class='sub_menu'>하위 하위 메뉴4</li>
+							<li class='sub_menu'>하위 하위 메뉴5</li>
+						</ul>
+					</li>
+					</div>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function() {
+			// 속성 추가 
+			$("#memNm").attr("price", 10000); 
+			
+			const price = $("#memNm").attr("price");
+			//console.log(price);
+			
+			$("#memNm").removeAttr("price");
+			
+			// prop - 상태와 관련된 속성
+			$("#checkbox").prop("checked", true); // 체크 상태로 변경 
+			//console.log($("#checkbox").prop("checked")); // true -> 체크된 상태, false - 미체크 상태 
+			
+			// data 
+			//$("#memNm").data("price", 10000); // data-price 
+			const dataPrice = $("#memNm").data("price");
+			//console.log(dataPrice);
+			
+			// value 
+			//console.log(document.getElementById("memNm").value);
+			$("#memNm").val(3000);
+			//console.log($("#memNm").val());
+			
+			// addClass
+			/*
+			$("#memNm").addClass("class1"); // 클래스 추가 
+			setTimeout(function() {
+				$("#memNm").removeClass("class1");  // 클래스 제거 
+				
+				console.log($("#memNm").hasClass("class1")); // 클래스 포함 여부 체크 
+			}, 1000);
+			
+			
+			setInterval(function() {
+				$("#memNm").toggleClass("class1"); // 클래스가 있으면 제거, 없으면 추가
+			}, 1000);
+			*/
+			//$("#memNm").data("price2", 20000);
+			//const dataPrice2 = $("#memNm").data("price2");
+			//console.log(dataPrice2);
+			//$("#memNm").removeData("price");
+			//const dataPrice1 = $("#memNm").data("price");
+			//console.log(dataPrice1);
+			//const memNm = $("#memNm")[0] // document 객체
+			//memNm.dataset.price2 = 20000;
+			//delete memNm.dataset.price2;
+		});
+		</script>
+	</head>
+	<body>
+		<input type='text' name='memNm' id='memNm' data-price='10000' value="2000">
+		<br>
+		<input type="checkbox" id="checkbox">
+	</body>
+</html>

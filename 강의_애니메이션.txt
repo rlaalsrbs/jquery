@@ -1,0 +1,28 @@
+jQuery 애니메이션
+
+.hide() - 숨김
+	- .slideUp() -> 상단으로 슬라이드 하면서 숨김(사라짐)
+	- .fadeOut() -> 점점 투명해지면서 숨김(사라짐)
+	
+.show() - 보임 
+	- .slideDown() -> 하단으로 슬라이드 하면서 보임
+	- .fadeIn() -> 점점 불투명해지면서 보임
+	
+
+토글(보임/안보임)
+		.toggle() -> hide() / show()
+		.slideToggle() -> slideUp() / slideDown()
+		.fadeToggle() -> fadeIn() / fadeOut()
+
+참고)
+.css() -> css("속성명") -> 현재 적용되어 있는 속성 값
+.css("display") -> 예) none -> 현재 요소가 안보임 처리되어 있다
+
+
+.animate() -> CSS 속성으로 다양하게 애니메이션 효과를 구현
+$(선택자).animate(스타일 속성 - 객체(1), 적용시간(1000 - 1초)(2), 가속도(3), 콜백함수(4));
+
+가속도 - swing(기본), linear
+콜백함수 - 
+call -> back -> 실행이 완료 되면 실행되는 함수
+					(애니메이션이 완료가 되면 실행되는 함수)

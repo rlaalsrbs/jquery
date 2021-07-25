@@ -1,0 +1,55 @@
+* { 
+	box-sizing: border-box; 
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	height: 100px;
+	background-color: gray;
+}
+
+nav {
+	height: 55px;
+	background-color: orange;
+}
+section { 
+	height: 2000px;
+	background-color: gray;
+}
+
+footer {
+	height: 100px;
+	background-color: blue;
+}
+
+aside {
+	position: fixed;
+	top: 0; 
+	left: -80%;
+	background-color: #ffffff;
+	width: 80%;
+	height: 100%;
+	z-index: 11;
+	transition: all 1s;
+}
+
+aside.on {
+	left: 0;
+}
+
+#layer_dim {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background:rgba(0,0,0,0.5);
+	z-index: 10;
+}
+
+.dn {
+	display: none;
+}

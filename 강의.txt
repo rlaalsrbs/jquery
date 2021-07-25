@@ -1,0 +1,36 @@
+jQuery 
+	window.document 객체 - HTML 문서와 관련 기능 
+								   - HTML을 변경, 수정, 추가, 삭제 
+								   - 속성을 변경 ... 
+								   
+								   
+								   - 요소를 선택 -> HTML을 변경, 수정, 추가, 삭제 ... 
+								   - 아이디 - getElementById
+								   - 클래스 - getElementsByClassName
+								   - 태그명 - getElementsByTagName
+								   - Name 속성 - getElementsByName
+								   - CSS 속성 - querySelector, querySelectorAll
+								   
+	- 주로 선택자와 관련된 편의 기능 -> 선택자가 가장 중요
+	
+	jQuery 라이브러리
+		- 소스를 다운로 받아서 사용하는 방법 (jQuery 공식 사이트)
+		- CDN(Contents Delivery Network) - URL형태로 외부 서버에서 제공 받는 형태
+		  - google cdn 
+		  
+	jQuery 생성자, 객체
+		$  == jQuery 
+		jQuery로 쓰기보다는 $로 더 많이 쓴다 
+		
+	
+	HTML 태그를 선택 
+		DOMContentLoaded --> load
+		(DOM 트리 구축 완료)
+		
+		$(document).ready(function() { // DOMContentLoaded 발생 이 후
+			
+		});
+		
+		$(function() { // 상기 방식과 동일
+		
+		});

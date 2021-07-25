@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function() {
+			const visibles = $(".box:visible");
+			//console.log("visible", visibles);
+			
+			const hiddens = $(".box:hidden");
+			//console.log("hiddens", hiddens);
+			
+			const selected = $("select option:selected");
+			//console.log(selected);
+			
+			const checked = $("input[type='checkbox']:checked");
+			console.log(checked);
+		});
+		</script>
+	</head>
+	<body>
+		<div class='box' style="width: 100px; height: 100px; background-color: orange"></div>
+		
+		<div class='box' style="width: 100px; height: 100px; background-color: orange; display: none;"></div>
+		
+		<select id='select'>
+			<option value='선택1'>선택1</option>
+			<option value='선택2'>선택2</option>
+			<option value='선택3' selected>선택3</option>
+			<option value='선택4'>선택4</option>
+			<option value='선택5'>선택5</option>
+		</select>
+		
+		
+		<input type='checkbox' name='hobby' value='등산' checked>등산
+		<input type="checkbox" name='hobby' value='수영'>수영
+		
+	</body>
+</html>

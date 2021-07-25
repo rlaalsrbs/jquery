@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function() {
+			/*
+			$("#text").on("mouseenter mouseleave", function() {
+				alert("이벤트 발생");
+			});
+			*/
+			$("#text").on({
+				"mouseenter" : function() {
+					console.log("마우스 enter");
+				},
+				"mouseleave" : function() {
+					console.log("마우스 leave");
+				}
+			});
+			
+			// mouseleave 이벤트 제거 
+			$("#text").off("mouseleave");
+			
+			/*
+			$("#button").click(function() {
+				alert("버튼 클릭!");
+			});
+			*/
+			/*
+			$("body").on("click", "#button", function() {
+				alert("버튼 클릭!");
+			});
+			
+			$("body").append("<button id='button'>클릭!</button>");
+			*/
+			
+			
+		});
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text">
+	</body>
+</html>

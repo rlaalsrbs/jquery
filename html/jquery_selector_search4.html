@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function() {
+			//const contents = $("ul").contents(); // children()과 유사 + 텍스트 노드
+			//console.log(contents);
+			
+			//const contents2 = $("body").contents();
+			//console.log(contents2);
+			
+			//$("li:contains('메뉴5')").css("background", "orange");
+			
+			//$("li").has("span").css("background", "orange");
+			
+			//$("li").not(".not").css("background", "orange");
+			//$("li").filter(".filter").css("background", "orange");
+			
+			//const isChecked = $("#checkbox").is(":checked");
+			//console.log(isChecked);
+			
+			//const index4 = $("ul #menu4").index();
+			//console.log(index4);
+			const index4 = $("li").index($("#menu4"));
+			console.log(index4);
+		});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>메뉴1</li>
+			<li class='not'>메뉴2</li>
+			<li><span>메뉴3</span></li>
+			<li id='menu4'>메뉴4</li>
+			<li class='not'>메뉴5</li>
+			<li>메뉴6</li>
+			<li class='not'>메뉴7</li>
+			<li>메뉴8</li>
+			<li class='filter'>메뉴9</li>
+			<li class='filter'>메뉴10</li>
+		</ul>
+		
+		<input type='checkbox' id='checkbox' checked>
+	</body>
+</html>

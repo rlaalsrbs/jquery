@@ -1,0 +1,41 @@
+객체 편집 메서드
+	-> 요소에 HTML 또는 텍스트를 추가 복사, 붙여넣거나, 가져오거나
+	-> appendChild - 부모의 자식 뒤에, insertBefore - 부모의 자식의 앞에(기준)
+	-> removeChild
+	-> innerHTML 
+	-> innerText 
+	
+	.html() -> innerHTML과 동일한 역할
+		요소 하위의 HTML을 가져오거나 또는 HTML 출력해 줄 때
+		.html(HTML 데이터); -> 요소 하위에 대체가 된다
+		
+	부모 - 자식 	
+	.append(HTML 데이터) -> 부모의 자식 가장 끝에 추가
+	.prepend(HTML 데이터) -> 부모의 자식 가장 앞에 추가
+	
+	
+	형제 
+	after("HTML 데이터") -> 요소의 바로 뒤로
+	before("HTML 데이터") -> 요소의 바로 앞에 
+	
+	
+	제거
+	.remove() -> 선택한 요소 제거
+	
+	내용 제거
+	.empty() -> 선택한 요소 하위 내용 제거 
+	
+	
+	복사
+	.clone() -> 선택한 요소가 복사 
+	
+	치환 
+	$(기존요소).replaceWith("변경할 새 요소");
+	
+	
+	.wrap("새요소") -> 선택한 요소를 새 요소로 감싸는(각각)
+	.wrapAll("새요소") -> 선택한 요소 모두를 한번만 감싼다
+	
+	.unwrap() -> 부모 요소를 제거
+	
+	.wrapInner() -> 선택한 요소 하위의 요소를 감싼다

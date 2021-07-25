@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+		$(function() {
+			$main = $(".start").closest(".main");
+			$main.find(".text1").css("color", "blue");
+			$main.find(".text2").css("border", "1px solid red");
+			$main.find(".text3").css("background", "orange");
+			$main.find(".text4").css("background", "blue");
+			
+			//console.log($(".start").closest(".sub1").find(".text4"));
+			console.log($(".start").parent().prev().children());
+		});
+		</script>
+	</head>
+	<body>
+		<ul class='main'>
+			<li id='menu1'>메뉴1</li>
+			<li>
+				<span class='text1'>선택한 후 글자색을 파란색으로 변경</span>
+			</li>
+			<li id='menu2'>
+				<span class='text2'>선택한 후 1px 붉은 경계선으로 적용</span>
+				<ul class='sub1'>
+					<li>하위1 메뉴1</li>
+					<li>하위1 메뉴2</li>
+					<li>
+						하위1 메뉴3
+						<span class='text4'>선택한 후 배경색을 파란색으로 변경</span>
+					</li>
+					<li>
+						하위1 메뉴4
+						<span class='start'>선택 시작점</span>
+					</li>
+				</ul>
+			</li>
+			<li id='menu3'>
+				메뉴3
+				<ul class='sub2'>
+					<li>하위2 메뉴1</li>
+					<li>하위2 메뉴2</li>
+					<li>하위2 메뉴3</li>
+					<li>
+						하위2 메뉴4
+						<span class='text3'>선택한 후 배경색을 orange로 변경</span>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>
